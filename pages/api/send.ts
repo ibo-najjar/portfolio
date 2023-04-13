@@ -15,14 +15,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const email = session.user?.email;
 
   if (req.method === "POST") {
-    const result = await db.Message.create({
+    const result = await db.message.create({
       data: {
         message: req.body,
-        name,
-        email,
+        name: name as string,
+        email: email as string,
         user: {
           connect: {
-            email,
+            email: email as string,
           },
         },
       },
