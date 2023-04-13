@@ -26,7 +26,7 @@ export default function Home() {
         </p>
         <p>
           I am always looking for new challenges and enjoy exploring new
-          technologies to expand my skills and knowledge base. Whether it's
+          technologies to expand my skills and knowledge base. Whether it&#x27;s
           trying out a new framework or experimenting with cutting-edge tools, I
           am always eager to learn and improve my craft.
         </p>
