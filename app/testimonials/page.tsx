@@ -15,7 +15,7 @@ const page = async ({}) => {
 
   console.log(session);
 
-  const messages = await db.Message.findMany({});
+  const messages = await db.message.findMany({});
 
   return (
     <div className="prose prose-invert space-y-4">

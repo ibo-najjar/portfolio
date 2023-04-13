@@ -32,7 +32,7 @@ export default function Home() {
         </p>
         {/* github a tag */}
         <a
-          href="github.com"
+          href="https://github.com/ibo-najjar"
           target="_blank"
           className="cursor-pointer w-6 h-6 underline-offset-2 hover:text-neutral-500 transition"
         >
