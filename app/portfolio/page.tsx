@@ -2,8 +2,8 @@ import Card from "./Card";
 
 const page = ({}) => {
   return (
-    <div className="w-full space-y-10 prose prose-invert mt-10">
-      {projects.map((project, index) => (
+    <div className="w-full space-y-16 mt-10 container">
+      {projects.map((project: Project, index: number) => (
         <Card
           title={project.title}
           description={project.description}
@@ -17,14 +17,24 @@ const page = ({}) => {
   );
 };
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  tools: string[];
+  githubUrl?: string;
+};
+
+const projects: Project[] = [
   {
     title: "NFT WEBSTORE",
     description:
       "A webstore for NFTs. Built with Next.js, Tailwind CSS, and Thirdweb.",
-    url: "https://nftwebstore.com",
+    url: "https://nft-webstore.vercel.app/",
     image: "nft.png",
     tools: ["Next.js", "Tailwind CSS", "Thirdweb"],
+    githubUrl: "d",
   },
   {
     title: "3D KEY",
