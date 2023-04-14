@@ -11,6 +11,7 @@ import { formatDistance } from "date-fns";
 interface pageProps {}
 
 const page = async ({}) => {
+  console.log("db", process.env.DATABASE_URL);
   const session = await getServerSession(authOptions);
 
   console.log(session);
