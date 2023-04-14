@@ -31,10 +31,10 @@ export default function RootLayout({
     >
       <body className="max-w-4xl mb-40 flex flex-col md:flex-row mt-8 md:mt-5 lg:mt-10 lg:mx-auto">
         <Navbar />
-        <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col md:px-0 px-3">
+        <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col md:px-0 px-3 mb-20 md:mb-0">
           {children}
         </main>
-        {/* <Socials /> */}
+        <Socials />
       </body>
     </html>
   );

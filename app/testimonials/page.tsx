@@ -31,7 +31,7 @@ const page = async ({}) => {
         />
       </div>
       <div>
-        {session ? (
+        {session?.user ? (
           <div className="mb-1">
             Signed in as {session.user?.name}{" "}
             <SignOutButton
@@ -41,14 +41,14 @@ const page = async ({}) => {
           </div>
         ) : (
           <div className="mb-1">
-            You muse be signed in to send a message.{" "}
+            You must be signed in to send a message.{" "}
             <SignInButton
               label="Sign in with github"
               className="underline underline-offset-2 text-neutral-100 cursor-pointer hover:text-neutral-400 transition"
             />
           </div>
         )}
-        <Input />
+        <Input session={session} />
       </div>
       <div className="prose-sm">
         {messages.map((message: any) => {

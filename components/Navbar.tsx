@@ -37,11 +37,11 @@ const Navbar: FC<NavbarProps> = ({}) => {
       <div className="lg:sticky lg:top-20">
         <div className="h-14 w-14 overflow-hidden rounded-full relative mb-3 md:mb-7 ml-3 md:ml-0">
           <Image
-            src="/profile.jpg"
+            src="/me.jpeg"
             alt="Profile"
             width={64}
             height={64}
-            className="object-cover"
+            className="object-cover grayscale"
             priority
           />
         </div>

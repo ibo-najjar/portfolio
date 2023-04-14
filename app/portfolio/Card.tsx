@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -5,6 +7,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import { SiTailwindcss, SiNextdotjs, SiVercel } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 interface CardProps {
   url: string;
@@ -25,7 +28,12 @@ const Card: FC<CardProps> = ({
 }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mx-auto items-center justify-center space-y-5 md:w-auto">
-      <div className="odd:order-first order-last flex-shrink-0 md:w-[300px] space-y-3 w-full">
+      <motion.div
+        className="odd:order-first order-last flex-shrink-0 md:w-[300px] space-y-3 w-full"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="flex justify-between items-center">
           <h3 className="text-xl font-semibold">{title}</h3>
           <p className="text-neutral-400 text-sm">2021-08-01</p>
@@ -48,12 +56,14 @@ const Card: FC<CardProps> = ({
           </div>
           {githubUrl && <Button href={githubUrl} />}
         </div>
-      </div>
+      </motion.div>
       {/* WINDOW */}
-      <Link
-        href={url}
+      <motion.div
         className="md:w-[400px] md:h-[220px] w-[300px] h-[160] border rounded-md shadow-lg overflow-hidden border-neutral-700 hover:scale-105 transition duration-300 cursor-pointer flex-shrink-0 mx-auto"
-        target="_blank"
+        onClick={() => window.open(url, "_blank")}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="h-8 border-b flex justify-between items-center px-3 bg-neutral-800 border-neutral-700">
           <div className="flex space-x-1">
@@ -80,7 +90,7 @@ const Card: FC<CardProps> = ({
             className="h-full w-full object-cover"
           />
         </div>
-      </Link>
+      </motion.div>
     </div>
   );
 };
