@@ -38,12 +38,20 @@ const About: FC<aboutProps> = ({}) => {
         am always eager to learn and improve my craft.
       </p>
       {/* github a tag */}
+
       <a
         href="https://github.com/ibo-najjar"
         target="_blank"
         className="cursor-pointer w-6 h-6 underline-offset-2 hover:text-neutral-500 transition"
       >
         check my work
+      </a>
+      <a
+        href="ibonajjar.dev@gmail.com"
+        target="_blank"
+        className="cursor-pointer w-6 h-6 underline-offset-2 hover:text-neutral-500 ml-4 transition"
+      >
+        contact me
       </a>
     </motion.div>
   );
