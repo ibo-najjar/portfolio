@@ -47,7 +47,7 @@ const About: FC<aboutProps> = ({}) => {
         check my work
       </a>
       <a
-        href="ibonajjar.dev@gmail.com"
+        href="mailto: ibonajjar.dev@gmail.com"
         target="_blank"
         className="cursor-pointer w-6 h-6 underline-offset-2 hover:text-neutral-500 ml-4 transition"
       >
